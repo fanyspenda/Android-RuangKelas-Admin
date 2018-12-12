@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "98063169249",
+    "firebase_url": "https://aplikasi-ruang-kelas.firebaseio.com",
+    "project_id": "aplikasi-ruang-kelas",
+    "storage_bucket": "aplikasi-ruang-kelas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98063169249:android:8cc1d3104625e771",
+        "android_client_info": {
+          "package_name": "arwinata.org.android_ruangkelas_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "98063169249-f2rr94tuu3tb7nrcjof2rpdb79qmji3a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "arwinata.org.android_ruangkelas_admin",
+            "certificate_hash": "f6249a7301a5c5bf8cace70c11514fc39625c7a4"
+          }
+        },
+        {
+          "client_id": "98063169249-cv0iboo60brssoiq6aacn3301lail9s3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOILA_h43l_L1hXvn8WJyNNgPLGI_671g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "98063169249-cv0iboo60brssoiq6aacn3301lail9s3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98063169249:android:f6765a112bb78f2b",
+        "android_client_info": {
+          "package_name": "arwinata.org.tubesandro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "98063169249-tb9udl60qequp303l1vd8cv9rt1gi2ko.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "arwinata.org.tubesandro",
+            "certificate_hash": "c80d3ccc55c98c7a3dd59876e5f07f1b745e71fd"
+          }
+        },
+        {
+          "client_id": "98063169249-cv0iboo60brssoiq6aacn3301lail9s3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOILA_h43l_L1hXvn8WJyNNgPLGI_671g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "98063169249-cv0iboo60brssoiq6aacn3301lail9s3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

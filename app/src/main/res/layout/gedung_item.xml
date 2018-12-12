@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/item_gambarGedung"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/logo_polinema"
+            android:tint="#6F000000"/>
+
+        <TextView
+            android:paddingTop="50dp"
+            android:id="@+id/item_namaGedung"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Nama Gedung Di Sini"
+            android:textColor="#FFF"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            app:layout_constraintTop_toBottomOf="@+id/item_gambarGedung"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="#CCC"/>
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
