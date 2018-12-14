@@ -1,4 +1,4 @@
-package arwinata.org.android_ruangkelas_admin;
+package arwinata.org.android_ruangkelas_admin.Class;
 
 public class Gedung {
 
@@ -21,6 +21,10 @@ public class Gedung {
     }
 
     public Gedung() {
+    }
+
+    public Gedung(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public Gedung(String nama, String imageUrl) {

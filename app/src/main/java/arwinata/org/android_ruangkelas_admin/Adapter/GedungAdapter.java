@@ -1,22 +1,21 @@
 package arwinata.org.android_ruangkelas_admin.Adapter;
 
 import android.content.Context;
-import android.net.Uri;
 import android.support.annotation.NonNull;
-import android.support.v7.widget.ContentFrameLayout;
 import android.support.v7.widget.RecyclerView;
-import android.text.Layout;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.google.firebase.firestore.DocumentSnapshot;
+import android.widget.Toast;
+
 import com.squareup.picasso.Picasso;
 import java.util.List;
 
-import arwinata.org.android_ruangkelas_admin.Gedung;
+import arwinata.org.android_ruangkelas_admin.Class.Gedung;
 import arwinata.org.android_ruangkelas_admin.R;
 
 public class GedungAdapter extends RecyclerView.Adapter<GedungAdapter.GedungViewHolder> {
@@ -45,6 +44,7 @@ public class GedungAdapter extends RecyclerView.Adapter<GedungAdapter.GedungView
                 .fit()
                 .centerCrop()
                 .into(holder.gambarGedung);
+
     }
 
     @Override
@@ -52,7 +52,8 @@ public class GedungAdapter extends RecyclerView.Adapter<GedungAdapter.GedungView
         return mGedung.size();
     }
 
-    public class GedungViewHolder extends RecyclerView.ViewHolder{
+    public class GedungViewHolder extends RecyclerView.ViewHolder
+            implements View.OnCreateContextMenuListener{
 
         public TextView namaGedung;
         public ImageView gambarGedung;
@@ -61,6 +62,29 @@ public class GedungAdapter extends RecyclerView.Adapter<GedungAdapter.GedungView
             super(itemView);
             namaGedung = itemView.findViewById(R.id.item_namaGedung);
             gambarGedung = itemView.findViewById(R.id.item_gambarGedung);
+
+            //mengklik panjang(LongClick), akan menjalankan perintah onCreateContextMenu
+            gambarGedung.setOnCreateContextMenuListener(this);
+
+            gambarGedung.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(mContext, "mengklik gedung "+namaGedung.getText(),
+                            Toast.LENGTH_LONG).show();
+                }
+            });
+        }
+
+        @Override
+        public void onCreateContextMenu(ContextMenu contextMenu, View view,
+                                        ContextMenu.ContextMenuInfo contextMenuInfo) {
+
+            //memberi judul menu yang muncul
+            contextMenu.setHeaderTitle("Memilih Gedung "+namaGedung.getText());
+
+            //pilihan menu
+            contextMenu.add(this.getAdapterPosition(), 121, 0, "Edit Gedung");
+            contextMenu.add(this.getAdapterPosition(), 122, 1, "Hapus Gedung");
         }
     }
 }

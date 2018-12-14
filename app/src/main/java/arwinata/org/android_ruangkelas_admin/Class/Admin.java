@@ -1,4 +1,4 @@
-package arwinata.org.android_ruangkelas_admin;
+package arwinata.org.android_ruangkelas_admin.Class;
 
 import android.widget.Adapter;
 

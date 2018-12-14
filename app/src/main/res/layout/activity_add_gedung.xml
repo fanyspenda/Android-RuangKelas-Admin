@@ -12,12 +12,11 @@
         android:layout_height="200dp"
         android:background="@color/grey"
         android:src="@drawable/camera"
-        android:padding="30dp"
         android:id="@+id/gambarGedung"
         />
 
     <LinearLayout
-        android:layout_marginVertical="15dp"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -34,45 +33,21 @@
             android:textSize="18sp"
             android:id="@+id/edtNamaGedung"/>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginLeft="20dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Deskripsi : "
-            android:textSize="18sp"/>
-        <EditText
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:hint="Deskripsi"
-            android:textSize="18sp"
-            android:id="@+id/edtDescGedung"/>
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <Button
-            android:layout_marginVertical="15dp"
-            android:layout_width="wrap_content"
+            android:id="@+id/btnSimpanG"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Kembali"
-            android:textAllCaps="false"
-            android:layout_marginLeft="20dp"
-            android:id="@+id/btnKembali"/>
-        <Button
-            android:layout_marginVertical="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            android:background="#00e500"
             android:text="Simpan"
-            android:textAllCaps="false"
-            android:layout_marginLeft="160dp"
-            android:id="@+id/btnSimpanG"/>
-    </LinearLayout>
+            android:textAllCaps="false" />
+    </RelativeLayout>
 
 </LinearLayout>

@@ -14,6 +14,8 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import arwinata.org.android_ruangkelas_admin.Class.Admin;
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
