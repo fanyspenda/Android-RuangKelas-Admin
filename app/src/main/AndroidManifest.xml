@@ -19,10 +19,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".Main2Activity" />
-        <activity android:name=".AddRuangKelas" />
+        <activity android:name=".unusedClass.AddRuangKelas" />
         <activity android:name=".AddGedung" />
-        <activity android:name=".AddJadwal" />
-        <activity android:name=".DetailGedung"></activity>
+        <activity android:name=".unusedClass.AddJadwal" />
+        <activity android:name=".unusedClass.DetailGedung" />
+        <activity android:name=".DaftarRuangActivity"></activity>
     </application>
 
 </manifest>

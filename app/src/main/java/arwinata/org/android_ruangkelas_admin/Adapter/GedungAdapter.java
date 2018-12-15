@@ -1,6 +1,7 @@
 package arwinata.org.android_ruangkelas_admin.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.ContextMenu;
@@ -16,6 +17,7 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 import arwinata.org.android_ruangkelas_admin.Class.Gedung;
+import arwinata.org.android_ruangkelas_admin.DaftarRuangActivity;
 import arwinata.org.android_ruangkelas_admin.R;
 
 public class GedungAdapter extends RecyclerView.Adapter<GedungAdapter.GedungViewHolder> {
@@ -52,6 +54,7 @@ public class GedungAdapter extends RecyclerView.Adapter<GedungAdapter.GedungView
         return mGedung.size();
     }
 
+    //mengimplementasikan OnCreate agar bisa menampilkan menu ketika OnLongClik
     public class GedungViewHolder extends RecyclerView.ViewHolder
             implements View.OnCreateContextMenuListener{
 
@@ -69,8 +72,9 @@ public class GedungAdapter extends RecyclerView.Adapter<GedungAdapter.GedungView
             gambarGedung.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(mContext, "mengklik gedung "+namaGedung.getText(),
-                            Toast.LENGTH_LONG).show();
+                    Intent iGedung = new Intent(mContext, DaftarRuangActivity.class);
+                    iGedung.putExtra("namaGedung", namaGedung.getText());
+                    mContext.startActivity(iGedung);
                 }
             });
         }
@@ -86,5 +90,16 @@ public class GedungAdapter extends RecyclerView.Adapter<GedungAdapter.GedungView
             contextMenu.add(this.getAdapterPosition(), 121, 0, "Edit Gedung");
             contextMenu.add(this.getAdapterPosition(), 122, 1, "Hapus Gedung");
         }
+    }
+
+    public void hapusGedung(int position){
+        //meng-get nama gedung untuk kemudian dihapus
+        Gedung gdgItem = mGedung.get(position);
+        String namaGedung = gdgItem.getNama();
+
+        //letakkan koding hapus di Sini
+
+        Toast.makeText(mContext, "menghapus gedung "+namaGedung, Toast.LENGTH_SHORT).show();
+        notifyDataSetChanged();
     }
 }

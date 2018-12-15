@@ -43,9 +43,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:textColor="#FFF"
+            android:textColor="@color/white"
             android:textStyle="bold"
-            android:background="#00e500"
+            android:background="@color/hijauButton"
             android:text="Simpan"
             android:textAllCaps="false" />
     </RelativeLayout>

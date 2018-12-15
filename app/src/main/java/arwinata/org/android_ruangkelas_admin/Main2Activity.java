@@ -51,24 +51,18 @@ public class Main2Activity extends AppCompatActivity {
         rvGedung = findViewById(R.id.rvGedung);
         rvGedung.setHasFixedSize(true);
         rvGedung.setLayoutManager(new LinearLayoutManager(this));
-        rvGedung.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Gedung gedung = new Gedung();
-                Query query = db.collection("gedung");
-                String namaGedung = gedung.getNama();
 
-                melihatGedung(namaGedung);
-            }
-        });
+        loadGedung(dbGedung);
+    }
 
+    private void loadGedung(CollectionReference db){
         mGedung = new ArrayList<>();
-        dbGedung = FirebaseFirestore.getInstance().collection("gedung");
+        db = FirebaseFirestore.getInstance().collection("gedung");
 
-        dbGedung.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+        db.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                if (queryDocumentSnapshots != null && queryDocumentSnapshots.isEmpty()==false) {
+                if (queryDocumentSnapshots != null && !queryDocumentSnapshots.isEmpty()) {
                     for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots){
                         Gedung gedung = documentSnapshot.toObject(Gedung.class);
                         mGedung.add(gedung);
@@ -87,15 +81,8 @@ public class Main2Activity extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
                 Toast.makeText(getApplicationContext(), "Error Mendapatkan Data: " + e, Toast.LENGTH_LONG).show();
-                return;
             }
         });
-    }
-
-    public void melihatGedung(String idGdg){
-        Intent i = new Intent(getApplicationContext(), DetailGedung.class);
-        i.putExtra("idGedung", idGdg);
-        startActivity(i);
     }
 
     @Override
@@ -107,7 +94,8 @@ public class Main2Activity extends AppCompatActivity {
                 return true;
 
             case 122:
-                Toast.makeText(getApplicationContext(), "ke Hapus Gedung", Toast.LENGTH_LONG).show();
+                gedAdapter.hapusGedung(item.getGroupId());
+                return true;
 
             default:
                 return super.onContextItemSelected(item);

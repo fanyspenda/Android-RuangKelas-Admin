@@ -2,14 +2,15 @@ package arwinata.org.android_ruangkelas_admin.Class;
 
 public class Ruangan {
 
-    private String imageJadwal, lantai, lokasi, nama;
+    private String imageJadwal, lokasi, nama;
+    private int lantai;
 
     //konstruktor kosong untuk menginisiasi objek pertama kali
     public Ruangan() {
     }
 
     //konstruktor full untuk mengambil semua data dari firestore
-    public Ruangan(String imageJadwal, String lantai, String lokasi, String nama) {
+    public Ruangan(String imageJadwal, int lantai, String lokasi, String nama) {
         this.imageJadwal = imageJadwal;
         this.lantai = lantai;
         this.lokasi = lokasi;
@@ -29,11 +30,11 @@ public class Ruangan {
         this.imageJadwal = imageJadwal;
     }
 
-    public String getLantai() {
+    public int getLantai() {
         return lantai;
     }
 
-    public void setLantai(String lantai) {
+    public void setLantai(int lantai) {
         this.lantai = lantai;
     }
 

@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main2Activity">
+    tools:context=".DaftarRuangActivity">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rvGedung"
+        android:id="@+id/rvRuang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </android.support.v7.widget.RecyclerView>
 
     <Button
-        android:id="@+id/btnAddGedung"
+        android:id="@+id/btnAddRuang"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_margin="20dp"
-        android:text="+ Gedung"
+        android:text="+ Ruang"
         android:textSize="10sp"
-        android:textStyle="bold"
         android:textColor="@color/white"
+        android:textStyle="bold"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:background="@drawable/addbtn"
         android:layout_marginBottom="10dp"/>
+
 </RelativeLayout>
