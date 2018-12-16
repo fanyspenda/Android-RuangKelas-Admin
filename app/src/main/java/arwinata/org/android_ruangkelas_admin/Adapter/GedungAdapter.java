@@ -18,6 +18,7 @@ import java.util.List;
 
 import arwinata.org.android_ruangkelas_admin.Class.Gedung;
 import arwinata.org.android_ruangkelas_admin.DaftarRuangActivity;
+import arwinata.org.android_ruangkelas_admin.DetailGedungActivity;
 import arwinata.org.android_ruangkelas_admin.R;
 
 public class GedungAdapter extends RecyclerView.Adapter<GedungAdapter.GedungViewHolder> {
@@ -87,7 +88,7 @@ public class GedungAdapter extends RecyclerView.Adapter<GedungAdapter.GedungView
             contextMenu.setHeaderTitle("Memilih Gedung "+namaGedung.getText());
 
             //pilihan menu
-            contextMenu.add(this.getAdapterPosition(), 121, 0, "Edit Gedung");
+            contextMenu.add(this.getAdapterPosition(), 121, 0, "Detail Gedung");
             contextMenu.add(this.getAdapterPosition(), 122, 1, "Hapus Gedung");
         }
     }
@@ -101,5 +102,15 @@ public class GedungAdapter extends RecyclerView.Adapter<GedungAdapter.GedungView
 
         Toast.makeText(mContext, "menghapus gedung "+namaGedung, Toast.LENGTH_SHORT).show();
         notifyDataSetChanged();
+    }
+
+    public void keDetailGedung(int position){
+        //meng-get nama gedung untuk kemudian dihapus
+        Gedung gdgItem = mGedung.get(position);
+
+        Intent i = new Intent(mContext, DetailGedungActivity.class);
+        i.putExtra("namaGedung", gdgItem.getNama());
+        i.putExtra("imageGedung", gdgItem.getImageUrl());
+        mContext.startActivity(i);
     }
 }

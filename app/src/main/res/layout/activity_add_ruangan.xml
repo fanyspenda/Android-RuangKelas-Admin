@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddRuanganActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Foto Jadwal: "
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textAlignment="textEnd"
+        android:textSize="18sp"/>
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="200dp"
+        android:src="@drawable/camera"
+        android:layout_gravity="center"
+        android:id="@+id/imgvJadwalRuang"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Nama Ruangan : "
+            android:textAlignment="textEnd"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/etNamaRuangan"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:hint="Nama Ruangan"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:text="Nama Lantai : "
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/etLantaiRuang"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:hint="Lantai"
+            android:inputType="number"
+            android:maxLines="1"
+            android:maxLength="2"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:text="Lokasi: "
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/tvLokasi"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:text="nama Gedung"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnSimpanRuang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@color/hijauButton"
+            android:text="Simpan"
+            android:textAllCaps="false" />
+    </RelativeLayout>
+
+</LinearLayout>

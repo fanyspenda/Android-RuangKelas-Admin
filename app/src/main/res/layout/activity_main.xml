@@ -42,6 +42,8 @@
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:hint="enter username"
+            android:inputType="text"
+            android:maxLines="1"
             android:id="@+id/etusername"/>
     </LinearLayout>
 

@@ -36,7 +36,6 @@ public class AddGedung extends AppCompatActivity {
     Button btnSimpan;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     StorageReference mStorageRef = FirebaseStorage.getInstance().getReference("fotoGedung");
-    boolean hasil=false;
     Uri mImageGedungUri;
     Gedung fotoGedung;
     String url;
@@ -113,7 +112,7 @@ public class AddGedung extends AppCompatActivity {
                                 "Error! Tidak dapat menambahkan data!", Toast.LENGTH_LONG).show();
                     }
                 });
-        int hijau = Color.parseColor("#00e500");
+        int hijau = Color.parseColor("#00bc00");
         btnSimpan.setBackgroundColor(hijau);
         btnSimpan.setEnabled(true);
     }

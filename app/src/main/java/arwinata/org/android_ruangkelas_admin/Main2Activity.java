@@ -90,7 +90,7 @@ public class Main2Activity extends AppCompatActivity {
 
         switch (item.getItemId()){
             case 121:
-                Toast.makeText(getApplicationContext(), "ke Edit Gedung", Toast.LENGTH_LONG).show();
+                gedAdapter.keDetailGedung(item.getGroupId());
                 return true;
 
             case 122:

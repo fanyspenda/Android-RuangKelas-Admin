@@ -3,6 +3,11 @@
     package="arwinata.org.android_ruangkelas_admin">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -19,11 +24,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".Main2Activity" />
-        <activity android:name=".unusedClass.AddRuangKelas" />
         <activity android:name=".AddGedung" />
-        <activity android:name=".unusedClass.AddJadwal" />
-        <activity android:name=".unusedClass.DetailGedung" />
-        <activity android:name=".DaftarRuangActivity"></activity>
+        <activity android:name=".DaftarRuangActivity" />
+        <activity android:name=".AddRuanganActivity" />
+        <activity android:name=".DetailGedungActivity"></activity>
     </application>
 
 </manifest>
