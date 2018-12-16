@@ -2,12 +2,11 @@ package arwinata.org.android_ruangkelas_admin.Class;
 
 public class Gedung {
 
-    private String nama, imageUrl;
+    private String nama, imageUrl, documentId;
 
     public String getNama() {
         return nama;
     }
-
     public void setNama(String nama) {
         this.nama = nama;
     }
@@ -15,9 +14,15 @@ public class Gedung {
     public String getImageUrl() {
         return imageUrl;
     }
-
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public String getDocumentId() {
+        return documentId;
+    }
+    public void setDocumentId(String documentId) {
+        this.documentId = documentId;
     }
 
     public Gedung() {

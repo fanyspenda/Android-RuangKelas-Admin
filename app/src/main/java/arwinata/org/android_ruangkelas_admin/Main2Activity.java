@@ -65,6 +65,7 @@ public class Main2Activity extends AppCompatActivity {
                 if (queryDocumentSnapshots != null && !queryDocumentSnapshots.isEmpty()) {
                     for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots){
                         Gedung gedung = documentSnapshot.toObject(Gedung.class);
+                        gedung.setDocumentId(documentSnapshot.getId());
                         mGedung.add(gedung);
 
                         Toast.makeText(getApplicationContext(), gedung.getImageUrl(), Toast.LENGTH_LONG).show();
