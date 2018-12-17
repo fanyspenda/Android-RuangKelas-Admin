@@ -15,6 +15,7 @@ import java.util.List;
 
 import arwinata.org.android_ruangkelas_admin.Class.Ruangan;
 import arwinata.org.android_ruangkelas_admin.DetailRuanganActivity;
+import arwinata.org.android_ruangkelas_admin.EditRuanganActivity;
 import arwinata.org.android_ruangkelas_admin.R;
 
 public class RuangAdapter extends RecyclerView.Adapter<RuangAdapter.RuangViewHolder> {
@@ -79,8 +80,13 @@ public class RuangAdapter extends RecyclerView.Adapter<RuangAdapter.RuangViewHol
 
     public void keEditRuangan(int position){
         Ruangan ruanganItem = mRuangan.get(position);
-        Toast.makeText(mContext, "mengedit ruangan "+ruanganItem.getNama(),
-                Toast.LENGTH_SHORT).show();
+        Intent iKeEditRuang = new Intent(mContext, EditRuanganActivity.class);
+        iKeEditRuang.putExtra("namaGedung", ruanganItem.getLokasi());
+        iKeEditRuang.putExtra("namaRuang", ruanganItem.getNama());
+        iKeEditRuang.putExtra("lantaiRuang", ruanganItem.getLantai());
+        iKeEditRuang.putExtra("imageJadwal", ruanganItem.getImageJadwal());
+        iKeEditRuang.putExtra("documentIdRuangan", ruanganItem.getDocumentId());
+        mContext.startActivity(iKeEditRuang);
     }
 
     public void hapusRuangan(int position){

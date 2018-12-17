@@ -96,11 +96,11 @@ public class DaftarRuangActivity extends AppCompatActivity {
     public boolean onContextItemSelected(MenuItem item) {
 
         switch (item.getItemId()){
-            case 121:
+            case 123:
                 ruanganAdapter.keEditRuangan(item.getGroupId());
                 return true;
 
-            case 122:
+            case 124:
                 ruanganAdapter.hapusRuangan(item.getGroupId());
                 return true;
 

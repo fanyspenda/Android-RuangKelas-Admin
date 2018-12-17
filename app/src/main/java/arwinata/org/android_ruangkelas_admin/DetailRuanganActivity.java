@@ -22,7 +22,7 @@ public class DetailRuanganActivity extends AppCompatActivity {
         tvNamaRuang = findViewById(R.id.tvDetailNamaRuang);
         phtvJadwal = findViewById(R.id.phtvDetailJadwalRuang);
 
-        tvLantai.setText(getIntent().getStringExtra("lantai"));
+        tvLantai.setText(String.valueOf(getIntent().getIntExtra("lantai", 0)));
         tvNamaRuang.setText(getIntent().getStringExtra("namaRuangan"));
 
         Picasso.get().load(getIntent().getStringExtra("imageJadwal"))
