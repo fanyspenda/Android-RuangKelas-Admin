@@ -19,6 +19,7 @@ import java.util.List;
 import arwinata.org.android_ruangkelas_admin.Class.Gedung;
 import arwinata.org.android_ruangkelas_admin.DaftarRuangActivity;
 import arwinata.org.android_ruangkelas_admin.EditGedungActivity;
+import arwinata.org.android_ruangkelas_admin.HapusGedungActivity;
 import arwinata.org.android_ruangkelas_admin.R;
 
 public class GedungAdapter extends RecyclerView.Adapter<GedungAdapter.GedungViewHolder> {
@@ -98,7 +99,11 @@ public class GedungAdapter extends RecyclerView.Adapter<GedungAdapter.GedungView
         Gedung gdgItem = mGedung.get(position);
         String namaGedung = gdgItem.getNama();
 
-        //letakkan koding hapus di Sini
+        Intent i = new Intent(mContext, HapusGedungActivity.class);
+        i.putExtra("namaGedung", gdgItem.getNama());
+        i.putExtra("imageGedung", gdgItem.getImageUrl());
+        i.putExtra("documentIdGedung", gdgItem.getDocumentId());
+        mContext.startActivity(i);
 
         Toast.makeText(mContext, "menghapus gedung "+namaGedung, Toast.LENGTH_SHORT).show();
         notifyDataSetChanged();

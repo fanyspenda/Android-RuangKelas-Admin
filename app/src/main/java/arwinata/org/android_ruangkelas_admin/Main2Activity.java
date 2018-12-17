@@ -67,8 +67,6 @@ public class Main2Activity extends AppCompatActivity {
                         Gedung gedung = documentSnapshot.toObject(Gedung.class);
                         gedung.setDocumentId(documentSnapshot.getId());
                         mGedung.add(gedung);
-
-                        Toast.makeText(getApplicationContext(), gedung.getImageUrl(), Toast.LENGTH_LONG).show();
                     }
                     gedAdapter = new GedungAdapter(getApplicationContext(), mGedung);
                     rvGedung.setAdapter(gedAdapter);

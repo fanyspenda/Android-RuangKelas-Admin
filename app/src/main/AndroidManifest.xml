@@ -30,7 +30,8 @@
         <activity android:name=".EditGedungActivity" />
         <activity android:name=".DetailRuanganActivity" />
         <activity android:name=".EditRuanganActivity" />
-        <activity android:name=".HapusRuanganActivity"></activity>
+        <activity android:name=".HapusRuanganActivity" />
+        <activity android:name=".HapusGedungActivity"></activity>
     </application>
 
 </manifest>
