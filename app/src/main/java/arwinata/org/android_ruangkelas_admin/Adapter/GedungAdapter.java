@@ -88,7 +88,7 @@ public class GedungAdapter extends RecyclerView.Adapter<GedungAdapter.GedungView
             contextMenu.setHeaderTitle("Memilih Gedung "+namaGedung.getText());
 
             //pilihan menu
-            contextMenu.add(this.getAdapterPosition(), 121, 0, "Detail Gedung");
+            contextMenu.add(this.getAdapterPosition(), 121, 0, "Edit Gedung");
             contextMenu.add(this.getAdapterPosition(), 122, 1, "Hapus Gedung");
         }
     }
@@ -104,7 +104,7 @@ public class GedungAdapter extends RecyclerView.Adapter<GedungAdapter.GedungView
         notifyDataSetChanged();
     }
 
-    public void keDetailGedung(int position){
+    public void keEditGedung(int position){
         //meng-get nama gedung untuk kemudian dihapus
         Gedung gdgItem = mGedung.get(position);
 

@@ -2,7 +2,11 @@ package arwinata.org.android_ruangkelas_admin.Class;
 
 public class Ruangan {
 
-    private String imageJadwal, lokasi, nama;
+    private String imageJadwal;
+    private String lokasi;
+    private String nama;
+
+    private String documentId;
     private int lantai;
 
     //konstruktor kosong untuk menginisiasi objek pertama kali
@@ -52,5 +56,13 @@ public class Ruangan {
 
     public void setNama(String nama) {
         this.nama = nama;
+    }
+
+    public String getDocumentId() {
+        return documentId;
+    }
+
+    public void setDocumentId(String documentId) {
+        this.documentId = documentId;
     }
 }

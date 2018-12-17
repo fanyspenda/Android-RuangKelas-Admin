@@ -91,7 +91,7 @@ public class Main2Activity extends AppCompatActivity {
 
         switch (item.getItemId()){
             case 121:
-                gedAdapter.keDetailGedung(item.getGroupId());
+                gedAdapter.keEditGedung(item.getGroupId());
                 return true;
 
             case 122:

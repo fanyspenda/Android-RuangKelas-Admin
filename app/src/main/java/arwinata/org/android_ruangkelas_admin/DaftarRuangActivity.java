@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -71,6 +72,7 @@ public class DaftarRuangActivity extends AppCompatActivity {
                 if (queryDocumentSnapshots != null && !queryDocumentSnapshots.isEmpty()) {
                     for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots){
                         Ruangan ruang = documentSnapshot.toObject(Ruangan.class);
+                        ruang.setDocumentId(documentSnapshot.getId());
                         mRuangan.add(ruang);
 
                         Toast.makeText(getApplicationContext(), ruang.getImageJadwal(), Toast.LENGTH_LONG).show();
@@ -88,5 +90,22 @@ public class DaftarRuangActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Error Mendapatkan Data: " + e, Toast.LENGTH_LONG).show();
             }
         });
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+
+        switch (item.getItemId()){
+            case 121:
+                ruanganAdapter.keEditRuangan(item.getGroupId());
+                return true;
+
+            case 122:
+                ruanganAdapter.hapusRuangan(item.getGroupId());
+                return true;
+
+            default:
+                return super.onContextItemSelected(item);
+        }
     }
 }

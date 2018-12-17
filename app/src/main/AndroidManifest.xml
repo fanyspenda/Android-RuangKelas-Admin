@@ -27,7 +27,8 @@
         <activity android:name=".AddGedung" />
         <activity android:name=".DaftarRuangActivity" />
         <activity android:name=".AddRuanganActivity" />
-        <activity android:name=".EditGedungActivity"></activity>
+        <activity android:name=".EditGedungActivity" />
+        <activity android:name=".DetailRuanganActivity"></activity>
     </application>
 
 </manifest>
